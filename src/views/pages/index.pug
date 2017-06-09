@@ -1,13 +1,147 @@
 extends ../layout
 
 block head
-  title Home
+  meta(http-equiv='content-type', content='text/html; charset=UTF-8')
+  meta(charset='utf-8')
+  title Faceboot - A Facebook style template for Bootstrap
+  meta(name='generator', content='Bootply')
+  meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+  link(href='css/bootstrap.min.css', rel='stylesheet')
+  //if lt IE 9
+    script(src='//html5shim.googlecode.com/svn/trunk/html5.js')
+  link(href='css/styles.css', rel='stylesheet')
 
 block content
-  .container-fluid
-    .row
-      .col-md-6
-        p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
-      .col-md-6
-        p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+  .wrapper
+    .box
+      .row.row-offcanvas.row-offcanvas-left
+        // main right col
+        #main.column.col-sm-12.col-xs-12
+          // top nav
+          .navbar.navbar-blue.navbar-static-top
+            .navbar-header
+              button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                span.sr-only Toggle
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+              div.navbar_brand.logo
+                h1.logotesto f
+            nav.collapse.navbar-collapse(role='navigation')
+              form.navbar-form.navbar-left
+                .input-group.input-group-sm(style='max-width:360px;')
+                  input#srch-term.form-control(type='text', placeholder='Cerca su facebook', name='srch-term')
+                  .input-group-btn
+                    button.btn.btn-default(type='submit')
+                      i.glyphicon.glyphicon-search
+              div.notification
+                ul.nav.navbar-nav.notification
+                    li
+                      a.immagine-navbar(href='#')
+                        i.glyphicon.glyphicon-home
+                        |  Home
+                    li
+                      a#link-request(href='#postModal', role='button', data-toggle='modal',style='padding=0px')
+                        img#request(src="../../images/friend.jpg")
+                    //li
+                      a#link-message(href='#postModal', role='button', data-toggle='modal',style='padding=0px')
+                        img#message(src="../../images/message.jpg")
+                    li
+                      a#link-notifica(href='#postModal', role='button', data-toggle='modal',style='padding=0px')
+                        img#notifica(src="../../images/notifica.jpg")
+              ul.nav.navbar-nav.navbar-right
+                li.dropdown
+                  a.dropdown-toggle(href='#', data-toggle='dropdown')
+                    i.glyphicon.glyphicon-user
+                  ul.dropdown-menu
+                    li
+                      a(href='') More
+                    li
+                      a(href='') More
+                    li
+                      a(href='') More
+                    li
+                      a(href='') More
+                    li
+                      a(href='') More
+          // /top nav
+          .padding
+            .full.col-sm-9
+              // content
+              .row
+                // main col left
+                .col-sm-3
+                  .container.indix
+                    ul.list-group
+                      li.list-group-item
+                        a primo link
+                      li.list-group-item
+                        a secondo link
+                      li.list-group-item
+                        a terzo link
+                      li.list-group-item
+                        a quarto link
+                      li.list-group-item
+                        a secondo link
+                      li.list-group-item
+                        a terzo link
+                      li.list-group-item
+                        a quarto link  
+                        
+                // main col right
+                .col-sm-9
+                  //post
+                  .panel.panel-default
+                    .panel-title
+                      img.img-responsive.img-profilo(src="../../images/bauman.jpg",alt="profilo bauman")
+                      div.div-titolo-post
+                        p.paragrafo-profilo
+                          span zygmunt bauman 
+                          |ha pubblicato un post 
+                    .panel-body  
+                      p.testo-post "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                      hr
+                      img.footer-post-img1(src='../../images/like.png')
+                      | mi piace 
+                      img.footer-post-img2(src='../../images/comment.png')
+                      | commenta
+                      img.footer-post-img2(src='../../images/share.png')
+                      | condividi
+              // /row
+
+              hr
+              h4.text-center
+                a(href='http://bootply.com/96266', target='ext') Download this Template @Bootply
+              hr
+            // /col-9
+          // /padding
+        // /main
+  // post modal
+  #postModal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+    .modal-dialog
+      .modal-content
+        .modal-header
+          button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+          |      Update Status
+        .modal-body
+          form.form.center-block
+            .form-group
+              textarea.form-control.input-lg(autofocus='', placeholder='What do you want to share?')
+        .modal-footer
+          div
+            button.btn.btn-primary.btn-sm(data-dismiss='modal', aria-hidden='true') Post
+            ul.pull-left.list-inline
+              li
+                a(href='')
+                  i.glyphicon.glyphicon-upload
+              li
+                a(href='')
+                  i.glyphicon.glyphicon-camera
+              li
+                a(href='')
+                  i.glyphicon.glyphicon-map-marker
+  // script references
+  script(src='//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js')
+  script(src='js/bootstrap.min.js')
+  script(src='js/scripts.js')
   
