@@ -3,7 +3,7 @@ extends ../layout
 block head
   meta(http-equiv='content-type', content='text/html; charset=UTF-8')
   meta(charset='utf-8')
-  title Faceboot - A Facebook style template for Bootstrap
+  title Facebook
   meta(name='generator', content='Bootply')
   meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
   link(href='css/bootstrap.min.css', rel='stylesheet')
@@ -42,28 +42,14 @@ block content
                         |  Home
                     li
                       a#link-request(href='#postModal', role='button', data-toggle='modal',style='padding=0px')
-                        img#request(src="../../images/friend.jpg")
+                        img#request(src="./images/notificationbar.png")
                     //li
                       a#link-message(href='#postModal', role='button', data-toggle='modal',style='padding=0px')
-                        img#message(src="../../images/message.jpg")
-                    li
+                        img#message(src="./images/message.jpg")
+                    //li
                       a#link-notifica(href='#postModal', role='button', data-toggle='modal',style='padding=0px')
-                        img#notifica(src="../../images/notifica.jpg")
-              ul.nav.navbar-nav.navbar-right
-                li.dropdown
-                  a.dropdown-toggle(href='#', data-toggle='dropdown')
-                    i.glyphicon.glyphicon-user
-                  ul.dropdown-menu
-                    li
-                      a(href='') More
-                    li
-                      a(href='') More
-                    li
-                      a(href='') More
-                    li
-                      a(href='') More
-                    li
-                      a(href='') More
+                        img#notifica(src="./images/notifica.jpg")
+              
           // /top nav
           .padding
             .full.col-sm-9
@@ -74,44 +60,211 @@ block content
                   .container.indix
                     ul.list-group
                       li.list-group-item
-                        a primo link
+                        a(href="#parigi") Rivoluzione industriale
                       li.list-group-item
-                        a secondo link
+                        a(href="#freud") Società di massa
                       li.list-group-item
-                        a terzo link
+                        a(href="#hannah") Totalitarismi
                       li.list-group-item
-                        a quarto link
+                        a(href="#mussolini") Retorica dell'uomo forte
                       li.list-group-item
-                        a secondo link
+                        a(href="#luce") Propaganda fascista
                       li.list-group-item
-                        a terzo link
+                        a(href="#dannunzio") D'Annunzio
                       li.list-group-item
-                        a quarto link  
+                        a(href="#ziosam") propaganda nella guerra fredda 
+                      li.list-group-item
+                        a(href="#bauman") Società di liquida
+                      li.list-group-item
+                        a(href="#gorgia") Gorgia
+                      li.list-group-item
+                        a(href="#trump") trump
                         
                 // main col right
                 .col-sm-9
-                  //post
-                  .panel.panel-default
+                  //post Expo Parigi
+                  .panel.panel-default#parigi
                     .panel-title
-                      img.img-responsive.img-profilo(src="../../images/bauman.jpg",alt="profilo bauman")
+                      img.img-responsive.img-profilo(src="./images/profilo_parigi.jpg",alt="profilo parigi")
+                      div.div-titolo-post
+                        p.paragrafo-profilo
+                          span Parigi 
+                          |ha pubblicato un nuovo evento
+                    .panel-body  
+                      p.testo-post Exposition universelle de Paris, 6 mai.
+                      img.postimage(src='./images/expo_parigi.jpg')
+                      hr
+                      img.footer-post-img1(src='./images/like.png')
+                      | mi piace 
+                      img.footer-post-img2(src='./images/comment.png')
+                      | commenta
+                      img.footer-post-img2(src='./images/share.png')
+                      | condividi
+                  //post societa di massa freud
+                  .panel.panel-default#freud
+                    .panel-title
+                      img.img-responsive.img-profilo(src="./images/profilo_freud.jpg",alt="profilo parigi")
+                      div.div-titolo-post
+                        p.paragrafo-profilo
+                          span Sigmund Freud 
+                          | ha pubblicato un nuovo post
+                    .panel-body
+                      p.testo-post "Le folle non hanno mai provato il desiderio della verità. Chiedono solo illusioni, delle quali non possono fare a meno. Danno sempre la preferenza al surreale rispetto al reale; l’irreale agisce su di esse con la stessa forza che il reale. Hanno un’evidente tendenza a non distinguere l’uno dall’altro."
+                      hr
+                      img.footer-post-img1(src='./images/like.png')
+                      | mi piace 
+                      img.footer-post-img2(src='./images/comment.png')
+                      | commenta
+                      img.footer-post-img2(src='./images/share.png')
+                      | condividi
+                  //post totalitarismi hanna harendt
+                  .panel.panel-default#hannah
+                    .panel-title
+                      img.img-responsive.img-profilo(src="./images/profilo_hannah_arendt.jpg",alt="profilo parigi")
+                      div.div-titolo-post
+                        p.paragrafo-profilo
+                          span Hannah Arendt 
+                          | ha pubblicato un nuovo post
+                    .panel-body
+                      p.testo-post "Il suddito ideale del regime totalitario non è il nazista convinto oppure il comunista convinto, ma le persone per la quale non c’è più differenza tra realtà e finzione, tra il vero e il falso."
+                      hr
+                      img.footer-post-img1(src='./images/like.png')
+                      | mi piace 
+                      img.footer-post-img2(src='./images/comment.png')
+                      | commenta
+                      img.footer-post-img2(src='./images/share.png')
+                      | condividi
+                  //post mussolini /todo
+                  .panel.panel-default#mussolini
+                    .panel-title
+                      img.img-responsive.img-profilo(src="./images/profilo_luce.jpg",alt="profilo parigi")
+                      div.div-titolo-post
+                        p.paragrafo-profilo
+                          span Istituto Luce 
+                          | ha pubblicato un nuovo post
+                    .panel-body
+                      p.testo-post "Vincere e viceremo"
+                      img.postimage(src='./images/mussolini_gif.gif')
+                      hr
+                      img.footer-post-img1(src='./images/like.png')
+                      | mi piace 
+                      img.footer-post-img2(src='./images/comment.png')
+                      | commenta
+                      img.footer-post-img2(src='./images/share.png')
+                      | condividi
+                      
+                  //post propaganda fascista
+                  .panel.panel-default#luce
+                    .panel-title
+                      img.img-responsive.img-profilo(src="./images/profilo_luce.jpg",alt="profilo parigi")
+                      div.div-titolo-post
+                        p.paragrafo-profilo
+                          span Istituto Luce 
+                          | ha pubblicato una nuova immagine
+                    .panel-body
+                      //p.testo-post
+                      img.postimage(src='./images/propaganda_fascista.jpg')
+                      hr
+                      img.footer-post-img1(src='./images/like.png')
+                      | mi piace 
+                      img.footer-post-img2(src='./images/comment.png')
+                      | commenta
+                      img.footer-post-img2(src='./images/share.png')
+                      | condividi
+                  //post volo su vienna
+                  .panel.panel-default#dannunzio
+                    .panel-title
+                      img.img-responsive.img-profilo(src="./images/profilo_dannunzio.jpg",alt="profilo parigi")
+                      div.div-titolo-post
+                        p.paragrafo-profilo
+                          span Gabriele D'Annunzio 
+                          | ha pubblicato una nuova immagine
+                    .panel-body
+                      //p.testo-post 
+                      img.postimage(src='./images/volo_su_vienna.jpg')
+                      hr
+                      img.footer-post-img1(src='./images/like.png')
+                      | mi piace 
+                      img.footer-post-img2(src='./images/comment.png')
+                      | commenta
+                      img.footer-post-img2(src='./images/share.png')
+                      | condividi
+                  //post zio sam
+                  .panel.panel-default#ziosam
+                    .panel-title
+                      img.img-responsive.img-profilo(src="./images/profilo_usa.jpg",alt="profilo parigi")
+                      div.div-titolo-post
+                        p.paragrafo-profilo
+                          span Usa 
+                          | ha pubblicato una nuova immagine
+                    .panel-body
+                      //p.testo-post 
+                      img.postimage(src='./images/zio_sam.jpg')
+                      hr
+                      img.footer-post-img1(src='./images/like.png')
+                      | mi piace 
+                      img.footer-post-img2(src='./images/comment.png')
+                      | commenta
+                      img.footer-post-img2(src='./images/share.png')
+                      | condividi
+                  //postbauman
+                  .panel.panel-default#bauman
+                    .panel-title
+                      img.img-responsive.img-profilo(src="./images/bauman.jpg",alt="profilo bauman")
                       div.div-titolo-post
                         p.paragrafo-profilo
                           span zygmunt bauman 
                           |ha pubblicato un post 
                     .panel-body  
-                      p.testo-post "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                      p.testo-post "Questa nostra epoca eccelle nello smantellare le strutture e nel liquefare i modelli, ogni tipo di struttura e ogni tipo di modello, con casualità e senza preavviso"
                       hr
-                      img.footer-post-img1(src='../../images/like.png')
+                      img.footer-post-img1(src='./images/like.png')
                       | mi piace 
-                      img.footer-post-img2(src='../../images/comment.png')
+                      img.footer-post-img2(src='./images/comment.png')
                       | commenta
-                      img.footer-post-img2(src='../../images/share.png')
+                      img.footer-post-img2(src='./images/share.png')
+                      | condividi
+                      
+                  
+                  //post gorgia
+                  .panel.panel-default#gorgia
+                    .panel-title
+                      img.img-responsive.img-profilo(src="./images/profilo_gorgia.jpg",alt="profilo bauman")
+                      div.div-titolo-post
+                        p.paragrafo-profilo
+                          span Gorgia
+                          | ha pubblicato un post 
+                    .panel-body
+                      p.testo-post "la parola è un gran dominatore, che, con un corpo piccolissimo e invisibile, sa compiere cose straordinarie"
+                      hr
+                      img.footer-post-img1(src='./images/like.png')
+                      | mi piace 
+                      img.footer-post-img2(src='./images/comment.png')
+                      | commenta
+                      img.footer-post-img2(src='./images/share.png')
+                      | condividi
+                  //post trump
+                  .panel.panel-default#trump
+                    .panel-title
+                      img.img-responsive.img-profilo(src="./images/profilo_trump.jpg",alt="profilo bauman")
+                      div.div-titolo-post
+                        p.paragrafo-profilo
+                          span Donald John Trump 
+                          | ha pubblicato un post 
+                    .panel-body
+                      p.testo-post "our border is being breached daily by criminals. We must build a wall & dduct costs from mexican foreign aid!"
+                      hr
+                      img.footer-post-img1(src='./images/like.png')
+                      | mi piace 
+                      img.footer-post-img2(src='./images/comment.png')
+                      | commenta
+                      img.footer-post-img2(src='./images/share.png')
                       | condividi
               // /row
 
               hr
               h4.text-center
-                a(href='http://bootply.com/96266', target='ext') Download this Template @Bootply
+                a(href='', target='ext') Site made by Pagliani Filippo 5F
               hr
             // /col-9
           // /padding

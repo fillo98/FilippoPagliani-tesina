@@ -119,6 +119,12 @@ hr {
     background-color:#393939;
 }
 
+.postimage{
+  min-width: 40%;
+  align-content: center;
+  margin-bottom: 15px;
+}
+
 .logo {
   display:block;
   padding:0px;
@@ -185,9 +191,9 @@ h1,h2,h3 {
 }
 
 .notification{
+  left: 575px;
   display: inline;
   position: relative;
-  right: 0px;
 }
 
 #request{
@@ -263,18 +269,18 @@ hr{
 }
 
 .paragrafo-profilo{
-  padding: 10px;
-  text-align: top;
+  padding-left: 5px;
   padding-top: 10px;
   display: inline;
   position: relative;
 }
 
 .img-profilo{
-  max-width: 50px;
-  max-height: 50px;
+  max-width: 55px;
+  max-height: 55px;
   display: inline;
   padding: 4px;
+  padding-left: 10px;
   padding-top: 10px;
 }
 
